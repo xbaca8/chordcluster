@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>KNN Song Similarity</title>
+<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: #0d0d1a; color: #e6e6f0;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  header {
+    padding: 14px 24px; background: #14142a;
+    border-bottom: 1px solid #2a2a4a;
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  }
+  h1 { font-size: 15px; font-weight: 600; margin: 0; letter-spacing: 0.6px; color: #fff; }
+  .toggle {
+    display: inline-flex; background: #0d0d1a;
+    border: 1px solid #2a2a4a; border-radius: 6px; overflow: hidden;
+  }
+  .toggle button {
+    padding: 6px 16px; background: transparent; color: #aaaacc;
+    border: none; cursor: pointer; font-size: 13px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .toggle button:hover { color: #fff; }
+  .toggle button.active { background: #2a2a4a; color: #fff; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #aaaacc; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  main { flex: 1; display: flex; min-height: 0; }
+  #graph { flex: 1; background: #0d0d1a; }
+  #info {
+    width: 380px; background: #14142a; border-left: 1px solid #2a2a4a;
+    overflow-y: auto; padding: 22px; scrollbar-width: thin;
+    scrollbar-color: #2a2a4a #14142a;
+  }
+  #info::-webkit-scrollbar { width: 8px; }
+  #info::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 4px; }
+  #info.empty { display: flex; align-items: center; justify-content: center; color: #6a6a8a; font-size: 13px; }
+  .field {
+    font-size: 10.5px; color: #8a8aaa; text-transform: uppercase;
+    letter-spacing: 1px; margin-top: 14px; font-weight: 600;
+  }
+  .field:first-child { margin-top: 0; }
+  .val { font-size: 14px; margin-top: 3px; word-break: break-word; color: #e6e6f0; }
+  .chords {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    color: #9a9acc; font-size: 12px; line-height: 1.6;
+  }
+  h2 {
+    font-size: 11px; margin: 26px 0 10px; color: #8a8aaa;
+    text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600;
+  }
+  .neighbor {
+    background: #0d0d1a; border: 1px solid #2a2a4a; border-radius: 8px;
+    padding: 12px; margin-bottom: 10px; transition: border-color 0.15s;
+  }
+  .neighbor:hover { border-color: #4a4a6a; }
+  .nh { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; gap: 8px; }
+  .nh .t { font-weight: 600; font-size: 13px; color: #fff; }
+  .nh .d {
+    font-size: 11px; color: #8a8aaa;
+    font-family: "SF Mono", Menlo, monospace; flex-shrink: 0;
+  }
+  .sub { font-size: 11.5px; color: #aaaacc; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>KNN SONG SIMILARITY</h1>
+  <div class="toggle">
+    <button id="btn-major" class="active" data-mode="major">Major</button>
+    <button id="btn-minor" data-mode="minor">Minor</button>
+  </div>
+  <div class="legend" id="legend"></div>
+</header>
+<main>
+  <div id="graph"></div>
+  <aside id="info" class="empty">Click a node to see song details</aside>
+</main>
+<script>
+  const GENRE_COLORS = {
+    blues:     "#4c9ed9",
+    classical: "#ff9f43",
+    country:   "#56c288",
+    disco:     "#ef5350",
+    hiphop:    "#ab7df6",
+    jazz:      "#b88968",
+    metal:     "#f06292",
+    pop:       "#a4a8bd",
+    reggae:    "#d4d256",
+    rock:      "#4dd0e1",
+  };
+
+  const graphEl = document.getElementById("graph");
+  const infoEl  = document.getElementById("info");
+  let network, currentNodes = [];
+
+  function buildLegend() {
+    document.getElementById("legend").innerHTML = Object.entries(GENRE_COLORS)
+      .map(([g, c]) => `<span><span class="dot" style="background:${c}"></span>${g}</span>`)
+      .join("");
+  }
+
+  function esc(s) {
+    if (s == null) return "—";
+    return String(s).replace(/[&<>"']/g, c =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  function chordLine(chords) {
+    if (!chords || !chords.length) return "—";
+    return chords.map(esc).join(" &rarr; ");
+  }
+
+  function renderInfo(node) {
+    infoEl.classList.remove("empty");
+    infoEl.innerHTML = `
+      <div class="field">File</div><div class="val">${esc(node.file_name)}</div>
+      <div class="field">Title</div><div class="val">${esc(node.title)}</div>
+      <div class="field">Artist</div><div class="val">${esc(node.artist)}</div>
+      <div class="field">Genre</div>
+      <div class="val"><span class="dot" style="background:${GENRE_COLORS[node.genre] || "#aaa"};margin-right:6px"></span>${esc(node.genre)}</div>
+      <div class="field">Predicted Key</div><div class="val">${esc(node.key)}</div>
+      <div class="field">Romanized Chords</div>
+      <div class="val chords">${chordLine(node.romanized_chords)}</div>
+      <h2>Nearest Neighbors (${node.neighbors.length})</h2>
+      ${node.neighbors.map(n => `
+        <div class="neighbor">
+          <div class="nh">
+            <span class="t">${esc(n.title || n.file_name)}</span>
+            <span class="d">${n.distance.toFixed(3)}</span>
+          </div>
+          <div class="sub">${esc(n.artist)} &middot; ${esc(n.genre)} &middot; ${esc(n.key)}</div>
+          <div class="chords">${chordLine(n.romanized_chords)}</div>
+        </div>`).join("")}
+    `;
+  }
+
+  async function load(mode) {
+    const res = await fetch(`graph_${mode}.json`);
+    const data = await res.json();
+    currentNodes = data.nodes;
+
+    const visNodes = data.nodes.map(n => ({
+      id: n.id,
+      color: { background: GENRE_COLORS[n.genre] || "#aaaacc", border: "#ffffff" },
+      title: `${n.title || n.file_name} (${n.genre})`,
+    }));
+    const weights = data.edges.map(e => e.weight);
+    const wMin = Math.min(...weights), wMax = Math.max(...weights);
+    const visEdges = data.edges.map((e, i) => ({
+      id: i, from: e.from, to: e.to,
+      color: { color: `rgba(170,170,204,${(0.08 + 0.35 * (1 - (e.weight - wMin) / (wMax - wMin + 1e-9))).toFixed(3)})` },
+    }));
+
+    if (network) network.destroy();
+    network = new vis.Network(
+      graphEl,
+      { nodes: new vis.DataSet(visNodes), edges: new vis.DataSet(visEdges) },
+      {
+        nodes: { shape: "dot", size: 11, borderWidth: 0.5 },
+        edges: { width: 0.5, smooth: false },
+        physics: {
+          solver: "forceAtlas2Based",
+          forceAtlas2Based: { gravitationalConstant: -30, springLength: 70, springConstant: 0.05 },
+          stabilization: { iterations: 250 },
+        },
+        interaction: { zoomView: true, dragView: true, hover: true, tooltipDelay: 120 },
+      }
+    );
+
+    network.on("click", params => {
+      if (!params.nodes.length) return;
+      const node = currentNodes.find(n => n.id === params.nodes[0]);
+      if (node) renderInfo(node);
+    });
+  }
+
+  document.querySelectorAll(".toggle button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".toggle button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      infoEl.classList.add("empty");
+      infoEl.innerHTML = "Click a node to see song details";
+      load(btn.dataset.mode);
+    });
+  });
+
+  buildLegend();
+  load("major");
+</script>
+</body>
+</html>
