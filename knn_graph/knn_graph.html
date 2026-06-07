@@ -31,6 +31,20 @@
   .toggle button.active { background: #2a2a4a; color: #fff; }
   .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #aaaacc; }
   .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .search { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; }
+  .search input {
+    background: #0d0d1a; border: 1px solid #2a2a4a; border-radius: 6px;
+    color: #e6e6f0; padding: 6px 10px; font-size: 13px; width: 200px; outline: none;
+  }
+  .search input:focus { border-color: #4a4a6a; }
+  .search input::placeholder { color: #6a6a8a; }
+  .search button {
+    padding: 6px 14px; background: #2a2a4a; color: #fff;
+    border: 1px solid #2a2a4a; border-radius: 6px; cursor: pointer; font-size: 13px;
+    transition: background 0.15s;
+  }
+  .search button:hover { background: #3a3a5a; }
+  .search .status { font-size: 12px; color: #f06292; min-width: 0; }
   .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
   main { flex: 1; display: flex; min-height: 0; }
   #graph { flex: 1; background: #0d0d1a; }
@@ -58,9 +72,10 @@
   }
   .neighbor {
     background: #0d0d1a; border: 1px solid #2a2a4a; border-radius: 8px;
-    padding: 12px; margin-bottom: 10px; transition: border-color 0.15s;
+    padding: 12px; margin-bottom: 10px; cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
   }
-  .neighbor:hover { border-color: #4a4a6a; }
+  .neighbor:hover { border-color: #4a4a6a; background: #16162e; }
   .nh { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; gap: 8px; }
   .nh .t { font-weight: 600; font-size: 13px; color: #fff; }
   .nh .d {
@@ -68,6 +83,70 @@
     font-family: "SF Mono", Menlo, monospace; flex-shrink: 0;
   }
   .sub { font-size: 11.5px; color: #aaaacc; margin-bottom: 6px; }
+  .delete-btn {
+    margin: 18px 0 4px; width: 100%; padding: 9px 14px; background: transparent;
+    color: #f06292; border: 1px solid #5a2a3a; border-radius: 6px; cursor: pointer;
+    font-size: 13px; font-weight: 600; transition: background 0.15s, color 0.15s;
+  }
+  .delete-btn:hover { background: #f06292; color: #fff; }
+  .delete-btn:disabled { opacity: 0.5; cursor: default; }
+
+  /* Add-song button + modal */
+  .add-btn {
+    padding: 6px 14px; background: #2f5fd0; color: #fff;
+    border: 1px solid #3f6fe0; border-radius: 6px; cursor: pointer;
+    font-size: 13px; font-weight: 600; transition: background 0.15s;
+  }
+  .add-btn:hover { background: #3f6fe0; }
+  .overlay {
+    position: fixed; inset: 0; background: rgba(5,5,12,0.72);
+    display: none; align-items: center; justify-content: center; z-index: 100;
+  }
+  .overlay.open { display: flex; }
+  .modal {
+    width: 440px; max-width: calc(100vw - 40px); background: #14142a;
+    border: 1px solid #2a2a4a; border-radius: 12px; padding: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .modal h2 {
+    margin: 0 0 4px; color: #fff; font-size: 16px; letter-spacing: 0.4px;
+    text-transform: none;
+  }
+  .modal p.hint { margin: 0 0 18px; color: #8a8aaa; font-size: 12.5px; }
+  .dropzone {
+    border: 2px dashed #3a3a5a; border-radius: 10px; padding: 28px 16px;
+    text-align: center; color: #8a8aaa; font-size: 13px; cursor: pointer;
+    transition: border-color 0.15s, background 0.15s; margin-bottom: 16px;
+  }
+  .dropzone:hover { border-color: #4a4a6a; }
+  .dropzone.dragover { border-color: #3f6fe0; background: #18213e; color: #cfd6ff; }
+  .dropzone .file { color: #cfd6ff; font-weight: 600; word-break: break-all; }
+  .modal label {
+    display: block; font-size: 10.5px; color: #8a8aaa; text-transform: uppercase;
+    letter-spacing: 1px; margin: 14px 0 5px; font-weight: 600;
+  }
+  .modal input[type=text], .modal input[type=number] {
+    width: 100%; background: #0d0d1a; border: 1px solid #2a2a4a; border-radius: 6px;
+    color: #e6e6f0; padding: 8px 10px; font-size: 13px; outline: none;
+  }
+  .modal input[type=text]:focus { border-color: #4a4a6a; }
+  .modal-actions { display: flex; gap: 10px; align-items: center; margin-top: 22px; }
+  .modal-actions .grow { flex: 1; }
+  .btn-secondary {
+    padding: 8px 16px; background: transparent; color: #aaaacc;
+    border: 1px solid #2a2a4a; border-radius: 6px; cursor: pointer; font-size: 13px;
+  }
+  .btn-secondary:hover { color: #fff; border-color: #4a4a6a; }
+  .btn-primary {
+    padding: 8px 18px; background: #2f5fd0; color: #fff; border: 1px solid #3f6fe0;
+    border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600;
+  }
+  .btn-primary:hover { background: #3f6fe0; }
+  .btn-primary:disabled { opacity: 0.5; cursor: default; }
+  .modal-status { font-size: 12px; min-height: 16px; }
+  .modal-status.err { color: #f06292; }
+  .modal-status.ok  { color: #56c288; }
+  .modal-status.busy { color: #8a8aaa; }
 </style>
 </head>
 <body>
@@ -78,11 +157,40 @@
     <button id="btn-minor" data-mode="minor">Minor</button>
   </div>
   <div class="legend" id="legend"></div>
+  <div class="search">
+    <input id="search-input" type="text" placeholder="Search by title…" autocomplete="off" />
+    <button id="search-btn">Search</button>
+    <span class="status" id="search-status"></span>
+  </div>
+  <button id="add-song-btn" class="add-btn">+ Add Song</button>
 </header>
 <main>
   <div id="graph"></div>
   <aside id="info" class="empty">Click a node to see song details</aside>
 </main>
+
+<div class="overlay" id="add-overlay">
+  <div class="modal">
+    <h2>Add a song to the graph</h2>
+    <p class="hint">Drop an audio file below. We'll analyze its chords, place it in the
+      Major or Minor graph, and highlight it.</p>
+    <div class="dropzone" id="dropzone">
+      <div id="dropzone-label">Drag &amp; drop an audio file here, or click to choose</div>
+      <input type="file" id="file-input" accept="audio/*,.wav,.mp3,.flac,.ogg,.m4a" hidden />
+    </div>
+    <label for="song-title">Title</label>
+    <input type="text" id="song-title" placeholder="Song title" autocomplete="off" />
+    <label for="song-artist">Artist</label>
+    <input type="text" id="song-artist" placeholder="Artist" autocomplete="off" />
+    <label for="song-duration">Analysis duration (seconds)</label>
+    <input type="number" id="song-duration" value="30" min="1" max="300" step="1" />
+    <div class="modal-actions">
+      <span class="modal-status grow" id="add-status"></span>
+      <button class="btn-secondary" id="add-cancel">Cancel</button>
+      <button class="btn-primary" id="add-submit" disabled>Add Song</button>
+    </div>
+  </div>
+</div>
 <script>
   const GENRE_COLORS = {
     blues:     "#4c9ed9",
@@ -95,11 +203,12 @@
     pop:       "#a4a8bd",
     reggae:    "#d4d256",
     rock:      "#4dd0e1",
+    external:  "#ffffff",
   };
 
   const graphEl = document.getElementById("graph");
   const infoEl  = document.getElementById("info");
-  let network, currentNodes = [];
+  let network, currentNodes = [], currentMode = "major";
 
   function buildLegend() {
     document.getElementById("legend").innerHTML = Object.entries(GENRE_COLORS)
@@ -129,9 +238,11 @@
       <div class="field">Predicted Key</div><div class="val">${esc(node.key)}</div>
       <div class="field">Romanized Chords</div>
       <div class="val chords">${chordLine(node.romanized_chords)}</div>
+      ${node.genre === "external" ? `
+        <button class="delete-btn" data-del="${esc(node.file_name)}">Delete song</button>` : ""}
       <h2>Nearest Neighbors (${node.neighbors.length})</h2>
       ${node.neighbors.map(n => `
-        <div class="neighbor">
+        <div class="neighbor" data-file="${esc(n.file_name)}">
           <div class="nh">
             <span class="t">${esc(n.title || n.file_name)}</span>
             <span class="d">${n.distance.toFixed(3)}</span>
@@ -143,7 +254,8 @@
   }
 
   async function load(mode) {
-    const res = await fetch(`graph_${mode}.json`);
+    currentMode = mode;
+    const res = await fetch(`graph_${mode}.json?t=${Date.now()}`, { cache: "no-store" });
     const data = await res.json();
     currentNodes = data.nodes;
 
@@ -182,14 +294,187 @@
     });
   }
 
-  document.querySelectorAll(".toggle button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".toggle button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+  // Select a node, show its details, and pan/zoom the graph to it.
+  function focusNode(node) {
+    renderInfo(node);
+    if (network) {
+      network.selectNodes([node.id]);
+      network.focus(node.id, {
+        scale: 1.1,
+        animation: { duration: 500, easingFunction: "easeInOutQuad" },
+      });
+    }
+  }
+
+  // Info-panel clicks: delete an external song, or navigate to a neighbor.
+  infoEl.addEventListener("click", e => {
+    const del = e.target.closest(".delete-btn");
+    if (del) { deleteSong(del.dataset.del, del); return; }
+    const box = e.target.closest(".neighbor");
+    if (!box) return;
+    const node = currentNodes.find(n => n.file_name === box.dataset.file);
+    if (node) focusNode(node);
+  });
+
+  // Delete a previously uploaded ('external') song, then reload its graph.
+  async function deleteSong(fileName, btn) {
+    if (!confirm(`Delete “${fileName}” from the ${currentMode} graph?`)) return;
+    if (btn) { btn.disabled = true; btn.textContent = "Deleting…"; }
+    try {
+      const res = await fetch("/api/delete_song", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ file_name: fileName, mode: currentMode }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
+      await load(data.mode);                 // reload the rebuilt graph
       infoEl.classList.add("empty");
       infoEl.innerHTML = "Click a node to see song details";
-      load(btn.dataset.mode);
-    });
+    } catch (err) {
+      alert("Delete failed: " + err.message);
+      if (btn) { btn.disabled = false; btn.textContent = "Delete song"; }
+    }
+  }
+
+  const searchInput  = document.getElementById("search-input");
+  const searchBtn    = document.getElementById("search-btn");
+  const searchStatus = document.getElementById("search-status");
+
+  function searchSong() {
+    const raw = searchInput.value.trim();
+    const q = raw.toLowerCase();
+    searchStatus.textContent = "";
+    if (!q) return;
+    // Prefer an exact (case-insensitive) title match, then fall back to a partial match.
+    let node = currentNodes.find(n => n.title && n.title.toLowerCase() === q);
+    if (!node) node = currentNodes.find(n => n.title && n.title.toLowerCase().includes(q));
+    if (node) {
+      focusNode(node);
+    } else {
+      searchStatus.textContent = `No match for “${raw}”`;
+    }
+  }
+
+  searchBtn.addEventListener("click", searchSong);
+  searchInput.addEventListener("keydown", e => { if (e.key === "Enter") searchSong(); });
+
+  // Switch to a mode (updates the toggle, clears search/info) and load its graph.
+  // Returns the load() promise so callers can act once the graph is ready.
+  function setMode(mode, { clearInfo = true } = {}) {
+    document.querySelectorAll(".toggle button").forEach(b =>
+      b.classList.toggle("active", b.dataset.mode === mode));
+    if (clearInfo) {
+      infoEl.classList.add("empty");
+      infoEl.innerHTML = "Click a node to see song details";
+    }
+    searchStatus.textContent = "";
+    searchInput.value = "";
+    return load(mode);
+  }
+
+  document.querySelectorAll(".toggle button").forEach(btn => {
+    btn.addEventListener("click", () => setMode(btn.dataset.mode));
+  });
+
+  // ── Add Song modal ────────────────────────────────────────────────────────
+  const overlay     = document.getElementById("add-overlay");
+  const dropzone    = document.getElementById("dropzone");
+  const dzLabel     = document.getElementById("dropzone-label");
+  const fileInput   = document.getElementById("file-input");
+  const titleInput    = document.getElementById("song-title");
+  const artistInput   = document.getElementById("song-artist");
+  const durationInput = document.getElementById("song-duration");
+  const addStatus     = document.getElementById("add-status");
+  const addSubmit   = document.getElementById("add-submit");
+  let pendingFile = null;
+
+  function setStatus(msg, kind = "") {
+    addStatus.textContent = msg;
+    addStatus.className = "modal-status grow" + (kind ? " " + kind : "");
+  }
+
+  function refreshSubmitState() {
+    addSubmit.disabled = !(pendingFile && titleInput.value.trim() && artistInput.value.trim());
+  }
+
+  function setFile(file) {
+    pendingFile = file || null;
+    dzLabel.innerHTML = file
+      ? `<span class="file">${esc(file.name)}</span>`
+      : "Drag &amp; drop an audio file here, or click to choose";
+    if (file && !titleInput.value.trim()) {
+      titleInput.value = file.name.replace(/\.[^.]+$/, "");  // prefill from filename
+    }
+    refreshSubmitState();
+  }
+
+  function openModal() {
+    overlay.classList.add("open");
+    titleInput.focus();
+  }
+  function closeModal() {
+    overlay.classList.remove("open");
+    pendingFile = null;
+    fileInput.value = "";
+    titleInput.value = "";
+    artistInput.value = "";
+    durationInput.value = "30";
+    setFile(null);
+    setStatus("");
+  }
+
+  document.getElementById("add-song-btn").addEventListener("click", openModal);
+  document.getElementById("add-cancel").addEventListener("click", closeModal);
+  overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && overlay.classList.contains("open")) closeModal();
+  });
+
+  dropzone.addEventListener("click", () => fileInput.click());
+  fileInput.addEventListener("change", () => setFile(fileInput.files[0]));
+  ["dragenter", "dragover"].forEach(ev =>
+    dropzone.addEventListener(ev, e => { e.preventDefault(); dropzone.classList.add("dragover"); }));
+  ["dragleave", "drop"].forEach(ev =>
+    dropzone.addEventListener(ev, e => { e.preventDefault(); dropzone.classList.remove("dragover"); }));
+  dropzone.addEventListener("drop", e => {
+    if (e.dataTransfer.files.length) setFile(e.dataTransfer.files[0]);
+  });
+  titleInput.addEventListener("input", refreshSubmitState);
+  artistInput.addEventListener("input", refreshSubmitState);
+
+  addSubmit.addEventListener("click", async () => {
+    if (addSubmit.disabled) return;
+    const title = titleInput.value.trim();
+    const artist = artistInput.value.trim();
+    addSubmit.disabled = true;
+    setStatus(`Analyzing “${title}”… this can take a few seconds.`, "busy");
+    try {
+      const duration = Math.max(1, Math.min(300, parseInt(durationInput.value, 10) || 30));
+      const buf = await pendingFile.arrayBuffer();
+      const res = await fetch("/api/add_song", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/octet-stream",
+          "X-Song-Title":    encodeURIComponent(title),
+          "X-Song-Artist":   encodeURIComponent(artist),
+          "X-Song-Filename": encodeURIComponent(pendingFile.name),
+          "X-Song-Duration": String(duration),
+        },
+        body: buf,
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
+
+      setStatus(`Added to ${data.mode} graph (key: ${data.key}). Highlighting…`, "ok");
+      await setMode(data.mode);                 // switch + reload the rebuilt graph
+      const node = currentNodes.find(n => n.file_name === data.file_name);
+      if (node) focusNode(node);
+      closeModal();
+    } catch (err) {
+      setStatus(err.message, "err");
+      refreshSubmitState();
+    }
   });
 
   buildLegend();

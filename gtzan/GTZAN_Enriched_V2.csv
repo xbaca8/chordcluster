@@ -1,16 +1,16 @@
 File Name,Genre,Title,Artist,GT Key,Key Name
-blues.00000.wav,blues,"One Bourbon, One Scotch, One Beer",John Lee Hooker,22,Gm
-blues.00001.wav,blues,I'm In the Mood,John Lee Hooker,19,Em
-blues.00002.wav,blues,Think Twice Before You Go (feat. Los Lobos),John Lee Hooker,19,Em
+blues.00000.wav,blues,"One Bourbon, One Scotch, One Beer",John Lee Hooker,10,G
+blues.00001.wav,blues,I'm In the Mood,John Lee Hooker,10,G
+blues.00002.wav,blues,Think Twice Before You Go (feat. Los Lobos),John Lee Hooker,7,E
 blues.00003.wav,blues,I'm Bad Like Jesse James (Live),John Lee Hooker,19,Em
 blues.00004.wav,blues,Walkin' the Boogie,John Lee Hooker,13,A#m
-blues.00005.wav,blues,Sugar Mama,John Lee Hooker,21,F#m
+blues.00005.wav,blues,Sugar Mama,John Lee Hooker,10,G
 blues.00006.wav,blues,Dreamin' Blues,John Lee Hooker,20,Fm
 blues.00007.wav,blues,Ground Hog Blues,John Lee Hooker,13,A#m
 blues.00008.wav,blues,Shake It Baby,John Lee Hooker,19,Em
 blues.00009.wav,blues,It's My Own Fault | Hey Baby (Medley),John Lee Hooker,22,Gm
 blues.00010.wav,blues,Lonely Boy Boogie,John Lee Hooker,20,Fm
-blues.00011.wav,blues,It Serves You Right to Suffer,John Lee Hooker,19,Em
+blues.00011.wav,blues,It Serves You Right to Suffer,John Lee Hooker,7,E
 blues.00012.wav,blues,Cross Road Blues,Robert Johnson,14,Bm
 blues.00013.wav,blues,Terraplane Blues,Robert Johnson,13,A#m
 blues.00014.wav,blues,#030: Obsession,This American Life,13,A#m
@@ -47,7 +47,7 @@ blues.00044.wav,blues,Testify,Stevie Ray Vaughan & Double Trouble,18,D#m
 blues.00045.wav,blues,Rude Mood,Stevie Ray Vaughan & Double Trouble,18,D#m
 blues.00046.wav,blues,Mary Had a Little Lamb,Stevie Ray Vaughan & Double Trouble,18,D#m
 blues.00047.wav,blues,Dirty Pool,Stevie Ray Vaughan & Double Trouble,16,C#m
-blues.00048.wav,blues,I'm Cryin',Stevie Ray Vaughan & Double Trouble,18,D#m
+blues.00048.wav,blues,I'm Cryin',Stevie Ray Vaughan & Double Trouble,6,D#
 blues.00049.wav,blues,Lenny,Stevie Ray Vaughan & Double Trouble,18,D#m
 blues.00050.wav,blues,What's Wrong,Magic Slim,14,Bm
 blues.00051.wav,blues,Snakebite,Magic Slim & The Teardrops,19,Em
@@ -99,58 +99,58 @@ blues.00096.wav,blues,Long Distance,Hot Toddy,19,Em
 blues.00097.wav,blues,T-Bone Shuffle,Hot Toddy,12,Am
 blues.00098.wav,blues,Iceman,Albert Collins,15,Cm
 blues.00099.wav,blues,Lights Are On (But Nobody's Home) [Live],Albert Collins,15,Cm
-classical.00000.wav,classical,"Concerto for Oboe d'amore, Strings, and Continuo in D Major, BWV 1053: I. (Allegro) [Reconstruction: Arnold Mehl]",Heinz Holliger & Camerata Bern,-1,unknown/modulation
+classical.00000.wav,classical,"Concerto for Oboe d'amore, Strings, and Continuo in D Major, BWV 1053: I. (Allegro) [Reconstruction: Arnold Mehl]",Heinz Holliger & Camerata Bern,5,D
 classical.00001.wav,classical,UNKNOWN TITLE,UNKNOWN ARTIST,-1,unknown/modulation
-classical.00002.wav,classical,"Concerto for Oboe d'amore, Strings, and Continuo in D Major, BWV 1053: III. Allegro (Reconstruction: Arnold Mehl)",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00003.wav,classical,"Cantata ""Ich Steh Mit Einem Fur Im Grabe"", BWV 156: Sinfonia",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00004.wav,classical,"Canonic Trio in F, BWV 1040","Heinz Holliger, Thomas Zehetmair, Massimo Polidori & Andreas Erismann",-1,unknown/modulation
-classical.00005.wav,classical,"Oboe Concerto in E-Flat, Wq 165: I. Allegro",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00006.wav,classical,"Oboe Concerto in E-Flat, Wq 165: II. Adagio ma non troppo",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00007.wav,classical,"Oboe Concerto in E-Flat, Wq 165: III. Allegro ma non troppo",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00008.wav,classical,"Oboe Concerto in B-Flat, Wq 164: I. Allegretto",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00009.wav,classical,"Oboe Concerto in B-Flat, Wq 164: II. Largo e mesto",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00010.wav,classical,"Oboe Concerto in B-Flat, Wq 164: III. Allegro moderato",Heinz Holliger & Camerata Bern,-1,unknown/modulation
-classical.00011.wav,classical,"Symphony No. 36 in C Major, K425 'Linz': I. Adagio: Allegro spiritoso",Gunther Hasselmann,-1,unknown/modulation
-classical.00012.wav,classical,"Symphony No. 36 in C Major, K425 'Linz': II. Poco adagio",Gunther Hasselmann,-1,unknown/modulation
-classical.00013.wav,classical,"Symphony No. 36 in C Major, K425 'Linz': III. Menuetto",Gunther Hasselmann,-1,unknown/modulation
-classical.00014.wav,classical,"Symphony No. 36 in C, K. 425, ""Linz"": IV. Finale (Presto)",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00015.wav,classical,"Symphony No. 38 in D Major, K504 'Prague': I. Adagio: Allegro",Gunther Hasselmann,-1,unknown/modulation
-classical.00016.wav,classical,"Symphony No. 38 in D Major, K504 'Prague': II. Andante",Gunther Hasselmann,-1,unknown/modulation
-classical.00017.wav,classical,"Symphony No. 38 in D Major, K. 504 ""Prague"": III. Finale (Presto)",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00018.wav,classical,"Symphony No. 39 in E-Flat, K. 543: I. Adagio - Allegro",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00019.wav,classical,"Symphony No. 39 in E Flat Major, K543: II. Andante con moto",Gunther Hasselmann,-1,unknown/modulation
-classical.00020.wav,classical,"Symphony No. 39 in E Flat Major, K543: III. Menuetto (Allegro)",Gunther Hasselmann,-1,unknown/modulation
-classical.00021.wav,classical,"Symphony No. 39 in E-Flat Major, K. 543: IV. Finale (Allegro)",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00022.wav,classical,"Symphony No. 40 in G Minor, K. 550: I. Molto Allegro",Sir Neville Marriner & Academy of St Martin in the Fields,-1,unknown/modulation
-classical.00023.wav,classical,"Symphony No. 40 in G Minor, K. 550: II. Andante",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00024.wav,classical,"Symphony No. 40 in G Minor, K. 550: III. Menuetto (Allegretto)",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
+classical.00002.wav,classical,"Concerto for Oboe d'amore, Strings, and Continuo in D Major, BWV 1053: III. Allegro (Reconstruction: Arnold Mehl)",Heinz Holliger & Camerata Bern,5,D
+classical.00003.wav,classical,"Cantata ""Ich Steh Mit Einem Fur Im Grabe"", BWV 156: Sinfonia",Heinz Holliger & Camerata Bern,8,F
+classical.00004.wav,classical,"Canonic Trio in F, BWV 1040","Heinz Holliger, Thomas Zehetmair, Massimo Polidori & Andreas Erismann",8,F
+classical.00005.wav,classical,"Oboe Concerto in E-Flat, Wq 165: I. Allegro",Heinz Holliger & Camerata Bern,6,D#
+classical.00006.wav,classical,"Oboe Concerto in E-Flat, Wq 165: II. Adagio ma non troppo",Heinz Holliger & Camerata Bern,6,D#
+classical.00007.wav,classical,"Oboe Concerto in E-Flat, Wq 165: III. Allegro ma non troppo",Heinz Holliger & Camerata Bern,6,D#
+classical.00008.wav,classical,"Oboe Concerto in B-Flat, Wq 164: I. Allegretto",Heinz Holliger & Camerata Bern,6,A#
+classical.00009.wav,classical,"Oboe Concerto in B-Flat, Wq 164: II. Largo e mesto",Heinz Holliger & Camerata Bern,6,A#
+classical.00010.wav,classical,"Oboe Concerto in B-Flat, Wq 164: III. Allegro moderato",Heinz Holliger & Camerata Bern,6,A#
+classical.00011.wav,classical,"Symphony No. 36 in C Major, K425 'Linz': I. Adagio: Allegro spiritoso",Gunther Hasselmann,3,C
+classical.00012.wav,classical,"Symphony No. 36 in C Major, K425 'Linz': II. Poco adagio",Gunther Hasselmann,3,C
+classical.00013.wav,classical,"Symphony No. 36 in C Major, K425 'Linz': III. Menuetto",Gunther Hasselmann,3,C
+classical.00014.wav,classical,"Symphony No. 36 in C, K. 425, ""Linz"": IV. Finale (Presto)",Academy of St Martin in the Fields & Sir Neville Marriner,3,C
+classical.00015.wav,classical,"Symphony No. 38 in D Major, K504 'Prague': I. Adagio: Allegro",Gunther Hasselmann,5,D
+classical.00016.wav,classical,"Symphony No. 38 in D Major, K504 'Prague': II. Andante",Gunther Hasselmann,5,D
+classical.00017.wav,classical,"Symphony No. 38 in D Major, K. 504 ""Prague"": III. Finale (Presto)",Academy of St Martin in the Fields & Sir Neville Marriner,5,D
+classical.00018.wav,classical,"Symphony No. 39 in E-Flat, K. 543: I. Adagio - Allegro",Academy of St Martin in the Fields & Sir Neville Marriner,6,D#
+classical.00019.wav,classical,"Symphony No. 39 in E Flat Major, K543: II. Andante con moto",Gunther Hasselmann,6,D#
+classical.00020.wav,classical,"Symphony No. 39 in E Flat Major, K543: III. Menuetto (Allegro)",Gunther Hasselmann,6,D#
+classical.00021.wav,classical,"Symphony No. 39 in E-Flat Major, K. 543: IV. Finale (Allegro)",Academy of St Martin in the Fields & Sir Neville Marriner,6,D#
+classical.00022.wav,classical,"Symphony No. 40 in G Minor, K. 550: I. Molto Allegro",Sir Neville Marriner & Academy of St Martin in the Fields,22,Gm
+classical.00023.wav,classical,"Symphony No. 40 in G Minor, K. 550: II. Andante",Academy of St Martin in the Fields & Sir Neville Marriner,22,Gm
+classical.00024.wav,classical,"Symphony No. 40 in G Minor, K. 550: III. Menuetto (Allegretto)",Academy of St Martin in the Fields & Sir Neville Marriner,22,Gm
 classical.00025.wav,classical,UNKNOWN TITLE,UNKNOWN ARTIST,-1,unknown/modulation
-classical.00026.wav,classical,"Symphony No. 41 in C Major, K. 551 ""Jupiter"": I. Allegro vivace",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00027.wav,classical,"Symphony No. 41 in C Major, K. 551 - ""Jupiter"": II. Andante cantabile",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00028.wav,classical,"Symphony No. 41 in C, K. 551 - ""Jupiter"": 3. Menuetto (Allegretto)",Sir Neville Marriner & Academy of St Martin in the Fields,-1,unknown/modulation
-classical.00029.wav,classical,"Symphony No. 41 in C Major, K. 551 - ""Jupiter"": IV. Molto allegro",Academy of St Martin in the Fields & Sir Neville Marriner,-1,unknown/modulation
-classical.00030.wav,classical,"Quartet In G Minor for Strings, Op. 10/I. Animé et très décidé","Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00031.wav,classical,"String Quartet in G Minor, Op. 10, L. 85: II. Assez vif et bien rythmé",Juilliard String Quartet,-1,unknown/modulation
-classical.00032.wav,classical,"Quartet In G Minor for Strings, Op. 10/III. Andantino, Doucement Expressif","Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00033.wav,classical,"Quartet In G Minor for Strings, Op. 10/IV. Très Modéré- Très Mouvement Et Avec Passion- Très Animé- Très Vivè","Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00034.wav,classical,Quartet In F Major for Strings/I. Allegro Moderato. Très Doux,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00035.wav,classical,Quartet In F Major for Strings/II. Assez Vif - Très Rythme,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00036.wav,classical,Quartet In F Major for Strings/III. Très Lent,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00037.wav,classical,Quartet In F Major for Strings/IV. Vif Et Agitè,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
+classical.00026.wav,classical,"Symphony No. 41 in C Major, K. 551 ""Jupiter"": I. Allegro vivace",Academy of St Martin in the Fields & Sir Neville Marriner,3,C
+classical.00027.wav,classical,"Symphony No. 41 in C Major, K. 551 - ""Jupiter"": II. Andante cantabile",Academy of St Martin in the Fields & Sir Neville Marriner,3,C
+classical.00028.wav,classical,"Symphony No. 41 in C, K. 551 - ""Jupiter"": 3. Menuetto (Allegretto)",Sir Neville Marriner & Academy of St Martin in the Fields,3,C
+classical.00029.wav,classical,"Symphony No. 41 in C Major, K. 551 - ""Jupiter"": IV. Molto allegro",Academy of St Martin in the Fields & Sir Neville Marriner,3,C
+classical.00030.wav,classical,"Quartet In G Minor for Strings, Op. 10/I. Animé et très décidé","Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",22,Gm
+classical.00031.wav,classical,"String Quartet in G Minor, Op. 10, L. 85: II. Assez vif et bien rythmé",Juilliard String Quartet,22,Gm
+classical.00032.wav,classical,"Quartet In G Minor for Strings, Op. 10/III. Andantino, Doucement Expressif","Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",22,Gm
+classical.00033.wav,classical,"Quartet In G Minor for Strings, Op. 10/IV. Très Modéré- Très Mouvement Et Avec Passion- Très Animé- Très Vivè","Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",22,Gm
+classical.00034.wav,classical,Quartet In F Major for Strings/I. Allegro Moderato. Très Doux,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",8,F
+classical.00035.wav,classical,Quartet In F Major for Strings/II. Assez Vif - Très Rythme,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",8,F
+classical.00036.wav,classical,Quartet In F Major for Strings/III. Très Lent,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",8,F
+classical.00037.wav,classical,Quartet In F Major for Strings/IV. Vif Et Agitè,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",8,F
 classical.00038.wav,classical,Ainsi la Nuit for String Quartet/I. Nocturne,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
 classical.00039.wav,classical,Ainsi la Nuit for String Quartet/II. Miroir D'espace,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
 classical.00040.wav,classical,Ainsi la Nuit for String Quartet/IV. Litanies 2,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
 classical.00041.wav,classical,Ainsi la Nuit for String Quartet/VII. Temps Suspendu,"Juilliard String Quartet, Robert Mann, Joel Smirnoff, Samuel Rhodes & Joel Krosnick",-1,unknown/modulation
-classical.00042.wav,classical,Sonata in the 9th Tone for 8 parts,E. Power Biggs & Vittorio Negri,3,C
+classical.00042.wav,classical,Sonata in the 9th Tone for 8 parts,E. Power Biggs & Vittorio Negri,-1,unknown/modulation
 classical.00043.wav,classical,"Konzert Fur Waldhorn Mit Orchester - Oder Klavierbegleitung, Op. 11 (Trenner-Verz. 117): I. Allegro",Johannes Ritzkowsky & Wolfgang Swallisch,-1,unknown/modulation
 classical.00044.wav,classical,Rhapsody in Blue (Live),Leonard Bernstein & Los Angeles Philharmonic,-1,unknown/modulation
-classical.00045.wav,classical,"Fuge Fur Klavier, AV 81/177","Gitti Pirner, Johannes Ritzkowsky & Wolfgang Swallisch",-1,unknown/modulation
+classical.00045.wav,classical,"Fuge Fur Klavier, AV 81/177","Gitti Pirner, Johannes Ritzkowsky & Wolfgang Swallisch",20,Fm
 classical.00046.wav,classical,"Violin Concerto No. 1, Op. 35","Kazimierz Kord, Warsaw Philharmonic Orchestra, Warsaw National Philharmonic Orchestra & Kaja Danczowska",-1,unknown/modulation
 classical.00047.wav,classical,On the Town: Three Dance Episodes: 2. Lonely Town: Pas de Deux (Andante Sostenuto),Leonard Bernstein & Israel Philharmonic Orchestra,-1,unknown/modulation
 classical.00048.wav,classical,Rhapsody In Blue,Andre Previn & London Symphony Orchestra,-1,unknown/modulation
-classical.00049.wav,classical,"Symphony No. 1 in C, Op. 21: IV. Finale (Adagio - Allegro Molto e Vivace)",Gewandhausorchester & Kurt Masur,-1,unknown/modulation
-classical.00050.wav,classical,"Adagio for Strings, Op. 11",Leonard Bernstein & Los Angeles Philharmonic,-1,unknown/modulation
-classical.00051.wav,classical,"Symphony No. 6 in B Minor, Op. 74 'Pathetique': I. Adagio - Allegro non troppo",Chicago Symphony Orchestra & Daniel Barenboim,-1,unknown/modulation
+classical.00049.wav,classical,"Symphony No. 1 in C, Op. 21: IV. Finale (Adagio - Allegro Molto e Vivace)",Gewandhausorchester & Kurt Masur,3,C
+classical.00050.wav,classical,"Adagio for Strings, Op. 11",Leonard Bernstein & Los Angeles Philharmonic,18,A#m
+classical.00051.wav,classical,"Symphony No. 6 in B Minor, Op. 74 'Pathetique': I. Adagio - Allegro non troppo",Chicago Symphony Orchestra & Daniel Barenboim,19,Bm
 classical.00052.wav,classical,Overture Candide (Live),Los Angeles Philharmonic & Leonard Bernstein,-1,unknown/modulation
 classical.00053.wav,classical,Canzoni et sonate (21): Sonata XIII a 8,Empire Brass,-1,unknown/modulation
 classical.00054.wav,classical,"Rigoletto / Act 2: ""Mio padre!...Compiuto pur quanto""","Dame Joan Sutherland, Richard Bonynge, London Symphony Orchestra, Sherrill Milnes, Christian Du Plessis, John Gibbs & Riccardo Cassinelli",-1,unknown/modulation
@@ -162,25 +162,25 @@ classical.00059.wav,classical,Mercure,The London Festival Players & Bernard Herr
 classical.00060.wav,classical,La belle excentrique,The London Festival Players & Bernard Herrmann,-1,unknown/modulation
 classical.00061.wav,classical,Jack in the Box,Bernard Herrmann & The London Festival Players,-1,unknown/modulation
 classical.00062.wav,classical,Saudades do Brasil,Bernard Herrmann & The London Festival Players,-1,unknown/modulation
-classical.00063.wav,classical,"Piano Sonata No. 21 in B-Flat, D. 960: I. Molto Moderato",Alfred Brendel,-1,unknown/modulation
-classical.00064.wav,classical,"Piano Sonata No. 21 in B-Flat, D. 960: II. Andante Sostenuto",Alfred Brendel,-1,unknown/modulation
-classical.00065.wav,classical,"Sonata in B-Flat Major, D. 960: III. Scherzo. Allegro vivace con delicatezza - Trio",Karin Kei Nagano,-1,unknown/modulation
-classical.00066.wav,classical,"Piano Sonata No. 21 in B-Flat, D.960: 4. Allegro Ma Non Troppo",Alfred Brendel,-1,unknown/modulation
-classical.00067.wav,classical,"Fantasy in C Major ""Wanderer""",Alfred Brendel,-1,unknown/modulation
-classical.00068.wav,classical,"Symphony No. 26 in D Minor - ""Lamentatione"": I. Allegro assai con spirito",Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00069.wav,classical,"Symphony No. 26 in D Minor - ""Lamentatione"": II. Adagio",Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00070.wav,classical,"Symphony No. 26 in D Minor - ""Lamentatione"": III. Minuet & Trio",Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00071.wav,classical,Symphony No. 35 in B-Flat Major: I. Allegro di molto,Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00072.wav,classical,Symphony No. 35 in B-Flat Major: II. Andante,Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00073.wav,classical,Symphony No. 35 in B-Flat Major: III. Minuet and Trio,Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00074.wav,classical,Symphony No. 35 in B-Flat Major: IV. Finale: Presto,Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00075.wav,classical,"Symphony No. 49 in F Minor, Hob. I:49 - ""La Pasione"": I. Adagio",Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00076.wav,classical,"Symphony No. 49 in F Minor, Hob. I:49 - ""La Pasione"": II. Allegro di molto",Nicholas Ward & Northern Chamber Orchestra,-1,unknown/modulation
-classical.00077.wav,classical,"Piano Sonata No. 8 in C Minor, Op.13 'Pathetique': I. Grave - Allegro di molto e con brio",Daniel Barenboim,-1,unknown/modulation
-classical.00078.wav,classical,"Piano Sonata No. 8 in C Minor, Op.13 'Pathetique': II. Adagio cantabile",Daniel Barenboim,-1,unknown/modulation
-classical.00079.wav,classical,"Sonata No. 8 in A Minor, K. 310: III. Presto (feat. Yundi)",Ludwig van Beethoven,-1,unknown/modulation
-classical.00080.wav,classical,"Symphony No. 6 in B Minor, Op. 74 'Pathetique': I. Adagio - Allegro non troppo",Chicago Symphony Orchestra & Daniel Barenboim,-1,unknown/modulation
-classical.00081.wav,classical,"Symphony No. 6 in B Minor, Op. 74 'Pathetique': II. Allegro con grazia",Chicago Symphony Orchestra & Daniel Barenboim,-1,unknown/modulation
+classical.00063.wav,classical,"Piano Sonata No. 21 in B-Flat, D. 960: I. Molto Moderato",Alfred Brendel,1,A#
+classical.00064.wav,classical,"Piano Sonata No. 21 in B-Flat, D. 960: II. Andante Sostenuto",Alfred Brendel,8,E
+classical.00065.wav,classical,"Piano Sonata No. 21 in B-Flat, D. 960: III. Scherzo. Allegro vivace con delicatezza",Alfred Brendel,1,A#
+classical.00066.wav,classical,"Piano Sonata No. 21 in B-Flat, D.960: 4. Allegro Ma Non Troppo",Alfred Brendel,1,A#
+classical.00067.wav,classical,"Fantasy in C Major ""Wanderer""",Alfred Brendel,3,C
+classical.00068.wav,classical,"Symphony No. 26 in D Minor - ""Lamentatione"": I. Allegro assai con spirito",Nicholas Ward & Northern Chamber Orchestra,17,Dm
+classical.00069.wav,classical,"Symphony No. 26 in D Minor - ""Lamentatione"": II. Adagio",Nicholas Ward & Northern Chamber Orchestra,17,Dm
+classical.00070.wav,classical,"Symphony No. 26 in D Minor - ""Lamentatione"": III. Minuet & Trio",Nicholas Ward & Northern Chamber Orchestra,17,Dm
+classical.00071.wav,classical,Symphony No. 35 in B-Flat Major: I. Allegro di molto,Nicholas Ward & Northern Chamber Orchestra,1,A#
+classical.00072.wav,classical,Symphony No. 35 in B-Flat Major: II. Andante,Nicholas Ward & Northern Chamber Orchestra,6,D#
+classical.00073.wav,classical,Symphony No. 35 in B-Flat Major: III. Minuet and Trio,Nicholas Ward & Northern Chamber Orchestra,1,A#
+classical.00074.wav,classical,Symphony No. 35 in B-Flat Major: IV. Finale: Presto,Nicholas Ward & Northern Chamber Orchestra,1,A#
+classical.00075.wav,classical,"Symphony No. 49 in F Minor, Hob. I:49 - ""La Pasione"": I. Adagio",Nicholas Ward & Northern Chamber Orchestra,20,Fm
+classical.00076.wav,classical,"Symphony No. 49 in F Minor, Hob. I:49 - ""La Pasione"": II. Allegro di molto",Nicholas Ward & Northern Chamber Orchestra,20,Fm
+classical.00077.wav,classical,"Piano Sonata No. 8 in C Minor, Op.13 'Pathetique': I. Grave - Allegro di molto e con brio",Daniel Barenboim,15,Cm
+classical.00078.wav,classical,"Piano Sonata No. 8 in C Minor, Op.13 'Pathetique': II. Adagio cantabile",Daniel Barenboim,20,Fm
+classical.00079.wav,classical,"Sonata No. 8 in A Minor, K. 310: III. Presto",Ludwig van Beethoven,12,Am
+classical.00080.wav,classical,"Symphony No. 6 in B Minor, Op. 74 'Pathetique': I. Adagio - Allegro non troppo",Chicago Symphony Orchestra & Daniel Barenboim,14,Bm
+classical.00081.wav,classical,"Symphony No. 6 in B Minor, Op. 74 'Pathetique': II. Allegro con grazia",Chicago Symphony Orchestra & Daniel Barenboim,14, Bm
 classical.00082.wav,classical,Hill Song No. 2,Clark Rundell & Royal Northern College of Music Wind Orchestra,-1,unknown/modulation
 classical.00083.wav,classical,Ye Banks and Braes O'Bonnie Doon,Clark Rundell & Royal Northern College of Music Wind Orchestra,-1,unknown/modulation
 classical.00084.wav,classical,"Let's Dance Gay in Green Meadow, ""Faeroe Island Dance""",Clark Rundell & Royal Northern College of Music Wind Orchestra,-1,unknown/modulation
@@ -193,13 +193,13 @@ classical.00090.wav,classical,"The Four Seasons: Violin Concerto No. 1 in E Majo
 classical.00091.wav,classical,"The Four Seasons: Violin Concerto No. 1 in E Major, ""Spring"": III. Allegro","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",-1,unknown/modulation
 classical.00092.wav,classical,"Piccolo Concerto, For Piccolo, Strings & Continuo In A Minor, Rv 44",Maurice Andre & Jean-Francois Paillard & Jean-Francois Pailla,-1,unknown/modulation
 classical.00093.wav,classical,UNKNOWN TITLE,UNKNOWN ARTIST,-1,unknown/modulation
-classical.00094.wav,classical,"The Four Seasons: Violin Concerto No. 2 in G Minor, ""Summer"": I. Allegro non molto","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",-1,unknown/modulation
-classical.00095.wav,classical,"The Four Seasons: Violin Concerto No. 2 in G Minor, ""Summer"": II. Adagio","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",-1,unknown/modulation
-classical.00096.wav,classical,"The Four Seasons - Violin Concerto in G Minor, RV 315 - ""Summer"": III. Presto","English Chamber Orchestra, JoseLuis Garcia & Leonard Slatkin",-1,unknown/modulation
-classical.00097.wav,classical,"Violin Concerto, For Violin, Strings & Continuo In A Minor, Op. 3/6, Rv",Maurice Andre & Jean-Francois Paillard & Jean-Francois Pailla,-1,unknown/modulation
-classical.00098.wav,classical,"The Four Seasons: Violin Concerto No. 3 in F Major, ""Autumn"": III. Allegro","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",-1,unknown/modulation
-classical.00099.wav,classical,"The Four Seasons: Violin Concerto No. 3 in F Major, ""Autumn"": II. Adagio molto","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",-1,unknown/modulation
-country.00000.wav,country,Just to Hear You Say That You Love Me (with Tim McGraw),Faith Hill,0,A
+classical.00094.wav,classical,"The Four Seasons: Violin Concerto No. 2 in G Minor, ""Summer"": I. Allegro non molto","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",22,Gm
+classical.00095.wav,classical,"The Four Seasons: Violin Concerto No. 2 in G Minor, ""Summer"": II. Adagio","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",22,Gm
+classical.00096.wav,classical,"The Four Seasons - Violin Concerto in G Minor, RV 315 - ""Summer"": III. Presto","English Chamber Orchestra, JoseLuis Garcia & Leonard Slatkin",22,Gm
+classical.00097.wav,classical,"Violin Concerto, For Violin, Strings & Continuo In A Minor, Op. 3/6, Rv",Maurice Andre & Jean-Francois Paillard & Jean-Francois Pailla,12, Am
+classical.00098.wav,classical,"The Four Seasons: Violin Concerto No. 3 in F Major, ""Autumn"": III. Allegro","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",8,F
+classical.00099.wav,classical,"The Four Seasons: Violin Concerto No. 3 in F Major, ""Autumn"": II. Adagio molto","English Chamber Orchestra, Leonard Slatkin & JoseLuis Garcia",17,Dm
+country.00000.wav,country,Just to Hear You Say That You Love Me (with Tim McGraw),Faith Hill,9,F#
 country.00001.wav,country,That's the Kind of Mood I'm In,Patty Loveless,2,B
 country.00002.wav,country,I Wish I Had a Nickel,UNKNOWN ARTIST,0,A
 country.00003.wav,country,If Tomorrow Never Comes (Live),Garth Brooks,10,G
@@ -208,7 +208,7 @@ country.00005.wav,country,You Win My Love,Shania Twain,10,G
 country.00006.wav,country,Straight Tequila Night,John Anderson,1,A#
 country.00007.wav,country,Best of Intentions,Travis Tritt,11,G#
 country.00008.wav,country,Never Knew Lonely,Vince Gill,7,E
-country.00009.wav,country,Meanwhile Back At the Ranch,The Clark Family Experience,22,Gm
+country.00009.wav,country,Meanwhile Back At the Ranch,The Clark Family Experience,10,G
 country.00010.wav,country,I Can't Stop Loving You,Johnny Tillotson,3,C
 country.00011.wav,country,"A Church, a Courtroom and Then Goodbye",Patsy Cline,10,G
 country.00012.wav,country,Music City U.S.A.,Bobby Bare,3,C
@@ -224,7 +224,7 @@ country.00021.wav,country,Raindrops Keep Fallin' On My Head,B.J. Thomas,8,F
 country.00022.wav,country,Love Me With All Your Heart,Karl Denver,2,B
 country.00023.wav,country,Today I Started Loving You Again,Kenny Rogers,8,F
 country.00024.wav,country,Your Cheatin' Heart,Hank Williams,3,C
-country.00025.wav,country,Love Hurts (with The Fallen Angels)d (Live),Gram Parsons,-1,unknown/modulation
+country.00025.wav,country,Love Hurts (with The Fallen Angels) (Live),Gram Parsons,10,G
 country.00026.wav,country,Home Is Where You're Happy,Willie Nelson,10,G
 country.00027.wav,country,Chicken on the Ground,Billy Joe Shaver & Emmylou Harris,0,A
 country.00028.wav,country,Would You Take Another Chance On Me?,Jerry Lee Lewis,5,D
@@ -241,9 +241,9 @@ country.00038.wav,country,Our Last Night,Los Lobos,3,C
 country.00039.wav,country,Johnnie Can't Dance (Johnnie Peut Pas Dancer),Zydecajun & Wayne Toups,0,A
 country.00040.wav,country,Dumas Walker,The Kentucky Headhunters,10,G
 country.00041.wav,country,Goin' By The Book,Johnny Cash,12,Am
-country.00042.wav,country,UNKNOWN TITLE,UNKNOWN ARTIST,12,Am
+country.00042.wav,country,UNKNOWN TITLE,UNKNOWN ARTIST,0,A
 country.00043.wav,country,Cadillac Style,Sammy Kershaw,5,D
-country.00044.wav,country,Unknown Title,Unknown Subtitle,7,E
+country.00044.wav,country,It Ain't Fair,Wesley Dennis,7,E
 country.00045.wav,country,Any Man Of Mine,Shania Twain,11,G#
 country.00046.wav,country,I Found My Girl In the U.S.A.,Jimmie Skinner,5,D
 country.00047.wav,country,I'm the Girl In the Usa,Connie Hall,3,C
@@ -252,7 +252,7 @@ country.00049.wav,country,Out of Control,George Jones,10,G
 country.00050.wav,country,Never Alone,Vince Gill,3,C
 country.00051.wav,country,Never Knew Lonely,Vince Gill,7,E
 country.00052.wav,country,When I Call Your Name,Vince Gill,8,F
-country.00053.wav,country,Liza Jane,Vince Gill,12,Am
+country.00053.wav,country,Liza Jane,Vince Gill,0,A
 country.00054.wav,country,Look at Us,Vince Gill,6,D#
 country.00055.wav,country,Take Your Memory With You,Vince Gill,7,E
 country.00056.wav,country,Pocket Full of Gold,Vince Gill,8,F
@@ -299,13 +299,13 @@ country.00096.wav,country,TRUE,George Strait,10,G
 country.00097.wav,country,Remember the Alamo,George Strait,8,F
 country.00098.wav,country,Maria,George Strait,3,C
 country.00099.wav,country,We Really Shouldn't Be Doing This,George Strait,2,B
-disco.00000.wav,disco,Lowdown,Boz Scaggs,12,Am
+disco.00000.wav,disco,Lowdown,Boz Scaggs,19,Em
 disco.00001.wav,disco,I Will Survive,Gloria Gaynor,12,Am
 disco.00002.wav,disco,Look Back Over Your Shoulder,Archie Bell & The Drells,8,F
 disco.00003.wav,disco,Deputy of Love,Don Armando's 2nd Ave. Rhumba Band,15,Cm
 disco.00004.wav,disco,Run Back,Carl Douglas,7,E
 disco.00005.wav,disco,Native New Yorker,Odyssey,15,Cm
-disco.00006.wav,disco,Romeo Juliet,Nick pauls,16,C#m
+disco.00006.wav,disco,Romeo Juliet,Nick Pauls,16,C#m
 disco.00007.wav,disco,"So Many Men, So Little Time",Miquel Brown,0,A
 disco.00008.wav,disco,"Found a Cure (12"" Disco Mix)",Ashford & Simpson,12,Am
 disco.00009.wav,disco,Get Up,Osibisa,15,Cm
@@ -351,7 +351,7 @@ disco.00048.wav,disco,Kung Fu Fighting,Carl Douglas,5,D
 disco.00049.wav,disco,Boogie Shoes,KC and the Sunshine Band,2,B
 disco.00050.wav,disco,That's the Way (I Like It),KC and the Sunshine Band,15,Cm
 disco.00051.wav,disco,That's the Way (I Like It),KC and the Sunshine Band,15,Cm
-disco.00052.wav,disco,In the Navy,Village People,22,Gm
+disco.00052.wav,disco,In the Navy,Village People,10,G
 disco.00053.wav,disco,"Knock on Wood (1985 7"" Remix)",Amii Stewart,23,G#m
 disco.00054.wav,disco,I Want Your Love,Chic,12,Am
 disco.00055.wav,disco,Disco Inferno,The Trammps,3,C
@@ -374,7 +374,7 @@ disco.00071.wav,disco,Get Down Tonight,KC and the Sunshine Band,20,Fm
 disco.00072.wav,disco,Mamma Mia,ABBA,5,D
 disco.00073.wav,disco,I'm Your Boogie Man,KC and the Sunshine Band,22,Gm
 disco.00074.wav,disco,Get Down Tonight,KC and the Sunshine Band,20,Fm
-disco.00075.wav,disco,Macho Man,Village People,8,F
+disco.00075.wav,disco,Macho Man,Village People,17,Dm
 disco.00076.wav,disco,Thank God It's Friday (Extended Version),Love and Kisses,-1,unknown/modulation
 disco.00077.wav,disco,Heaven Must Be Missing An Angel,Tavares,3,C
 disco.00078.wav,disco,I Am What I Am (2014 Club Version),Gloria Gaynor,8,F
@@ -546,10 +546,10 @@ jazz.00043.wav,jazz,I Love Paris,Coleman Hawkins & Manny Albam and His Orchestra
 jazz.00044.wav,jazz,Sweet Lorraine,"Henry ""Red"" Allen",-1,unknown/modulation
 jazz.00045.wav,jazz,How Strange,Coleman Hawkins and His Orchestra,3,C
 jazz.00046.wav,jazz,Spotlite,Coleman Hawkins,6,D#
-jazz.00047.wav,jazz,Unknown Title,Unknown Subtitle,-1,unknown/modulation
-jazz.00048.wav,jazz,Unknown Title,Unknown Subtitle,-1,unknown/modulation
+jazz.00047.wav,jazz,Unknown Title,Unknown Artist,-1,unknown/modulation
+jazz.00048.wav,jazz,Unknown Title,Unknown Artist,-1,unknown/modulation
 jazz.00049.wav,jazz,April In Paris (feat. Clifford Brown),Sarah Vaughan,8,F
-jazz.00050.wav,jazz,Unknown Title,Unknown Subtitle,22,Gm
+jazz.00050.wav,jazz,Unknown Title,Unknown Artist,22,Gm
 jazz.00051.wav,jazz,Body and Soul,Coleman Hawkins,-1,unknown/modulation
 jazz.00052.wav,jazz,Dear Rudy (feat. Antonio Hart & Bill Cunliffe),Terell Stafford,3,C
 jazz.00053.wav,jazz,Dinah,Lionel Hampton,11,G#
@@ -565,7 +565,7 @@ jazz.00062.wav,jazz,Under Paris Skies,Coleman Hawkins,20,Fm
 jazz.00063.wav,jazz,I'll Never Be the Same,"Ahmed Abdullah, Marshall Allen, Clifford Barbaro, John Gilmore, Gilmore, Tyrone Hill, Ron Mcbee, Sun Ra, Sun Ra Arkestra, Knoel Scott, Jorge Silva & June Tyson",8,F
 jazz.00064.wav,jazz,"Jeepers, Creepers",Lester Young,3,C
 jazz.00065.wav,jazz,When Lights Are Low,Lionel Hampton,11,G#
-jazz.00066.wav,jazz,Unknown Title,Unknown Subtitle,-1,unknown/modulation
+jazz.00066.wav,jazz,Unknown Title,Unknown Artist,-1,unknown/modulation
 jazz.00067.wav,jazz,She's Funny That Way,Coleman Hawkins and His Orchestra,11,G#
 jazz.00068.wav,jazz,Say It Isn't So,Coleman Hawkins & His 52nd Street All Stars,8,F
 jazz.00069.wav,jazz,I Love Paris,Coleman Hawkins & Manny Albam and His Orchestra,3,C
@@ -610,7 +610,7 @@ metal.00007.wav,metal,Die By My Hand,Coroner,21,F#m
 metal.00008.wav,metal,Balls to the Wall,Accept,19,Em
 metal.00009.wav,metal,Angel's Retreat,Tvangeste,17,Dm
 metal.00010.wav,metal,My Faeryland Forgotten,Dark Tranquillity,-1,unknown/modulation
-metal.00011.wav,metal,Unknown Title,Unknown Subtitle,-1,unknown/modulation
+metal.00011.wav,metal,Unknown Title,Unknown Artist,-1,unknown/modulation
 metal.00012.wav,metal,"Away, Delight, Away",Dark Tranquillity,12,Am
 metal.00013.wav,metal,Of Chaos and Eternal Night,Dark Tranquillity,12,Am
 metal.00014.wav,metal,With the Flaming Shades of Fall,Dark Tranquillity,14,Bm
@@ -622,7 +622,7 @@ metal.00019.wav,metal,Piece By Piece,Slayer,18,D#m
 metal.00020.wav,metal,Necrophobic,Slayer,23,G#m
 metal.00021.wav,metal,I'm Eighteen,Anthrax,19,Em
 metal.00022.wav,metal,Crazy Train,Ozzy Osbourne,0,A
-metal.00023.wav,metal,Unknown Title,Unknown Subtitle,15,Cm
+metal.00023.wav,metal,Unknown Title,Unknown Artist,15,Cm
 metal.00024.wav,metal,Kinescope,Jacob's Dream,14,Bm
 metal.00025.wav,metal,Peace Sells,Megadeth,19,Em
 metal.00026.wav,metal,Across the River,Anthrax,19,Em
@@ -638,7 +638,7 @@ metal.00035.wav,metal,Bloodline,Slayer,16,C#m
 metal.00036.wav,metal,In a Gadda Da Vida,Slayer,-1,unknown/modulation
 metal.00037.wav,metal,And the Bands Played On,Saxon,18,D#m
 metal.00038.wav,metal,...And Justice for All,Metallica,-1,unknown/modulation
-metal.00039.wav,metal,Unknown Title,Unknown Subtitle,23,G#m
+metal.00039.wav,metal,Unknown Title,Unknown Artist,23,G#m
 metal.00040.wav,metal,Stand Up and Shout,Dio,12,Am
 metal.00041.wav,metal,Gypsy,Dio,12,Am
 metal.00042.wav,metal,Caught In the Middle,Dio,12,Am
@@ -671,9 +671,9 @@ metal.00068.wav,metal,Breaking the Law,Judas Priest,12,Am
 metal.00069.wav,metal,Paranoid,Black Sabbath,19,Em
 metal.00070.wav,metal,Highway to Hell,AC/DC,23,G#m
 metal.00071.wav,metal,Pour Some Sugar On Me,Def Leppard,16,C#m
-metal.00072.wav,metal,Unknown Title,Unknown Subtitle,22,Gm
+metal.00072.wav,metal,Unknown Title,Unknown Artist,22,Gm
 metal.00073.wav,metal,The Memory Remains (feat. Marianne Faithfull),Metallica,18,D#m
-metal.00074.wav,metal,Unknown Title,Unknown Subtitle,16,C#m
+metal.00074.wav,metal,Unknown Title,Unknown Artist,16,C#m
 metal.00075.wav,metal,Until It Sleeps,Metallica,23,G#m
 metal.00076.wav,metal,Seek & Destroy,Metallica,19,Em
 metal.00077.wav,metal,Hell Patrol,Judas Priest,14,Bm
@@ -684,7 +684,7 @@ metal.00081.wav,metal,Live and Let Die,Guns N' Roses,21,F#m
 metal.00082.wav,metal,Welcome to the Jungle,Guns N' Roses,18,D#m
 metal.00083.wav,metal,For Whom the Bell Tolls,Metallica,19,Em
 metal.00084.wav,metal,Shock the Monkey,Coal Chamber,15,Cm
-metal.00085.wav,metal,Unknown Title,Unknown Subtitle,21,F#m
+metal.00085.wav,metal,Unknown Title,Unknown Artist,21,F#m
 metal.00086.wav,metal,You Give Love a Bad Name,Bon Jovi,15,Cm
 metal.00087.wav,metal,So What,Metallica,12,Am
 metal.00088.wav,metal,Twist of Cain,Danzig,12,Am
@@ -705,7 +705,7 @@ pop.00002.wav,pop,My All (Classic Radio Club Mix),Mariah Carey,22,Gm
 pop.00003.wav,pop,Hand In My Pocket,Alanis Morissette,10,G
 pop.00004.wav,pop,Head Over Feet,Alanis Morissette,-1,unknown/modulation
 pop.00005.wav,pop,Ironic,Alanis Morissette,2,B
-pop.00006.wav,pop,Unknown Title,Unknown Subtitle,3,C
+pop.00006.wav,pop,Unknown Title,Unknown Artist,3,C
 pop.00007.wav,pop,Uninvited,Alanis Morissette,17,Dm
 pop.00008.wav,pop,You Learn,Alanis Morissette,11,G#
 pop.00009.wav,pop,You Oughta Know,Alanis Morissette,21,F#m
@@ -713,7 +713,7 @@ pop.00010.wav,pop,Every Breath You Take,Robert Downey Jr. And Sting,0,A
 pop.00011.wav,pop,The Prayer,Andrea Bocelli & Celine Dion,8,F
 pop.00012.wav,pop,A Natural Woman,"Aretha Franklin, Carole King, Celine Dion, Gloria Estefan, Mariah Carey & Shania Twain",-1,unknown/modulation
 pop.00013.wav,pop,Every Time I Close My Eyes,"Babyface, Mariah Carey, Kenny G & Sheila E.",8,F
-pop.00014.wav,pop,Unknown Title,Unknown Subtitle,11,G#
+pop.00014.wav,pop,Unknown Title,Unknown Artist,11,G#
 pop.00015.wav,pop,(You Drive Me) Crazy,Britney Spears,15,Cm
 pop.00016.wav,pop,(I Can't Get No) Satisfaction,Britney Spears,18,D#m
 pop.00017.wav,pop,(I Can't Get No) Satisfaction,Britney Spears,9,F#
@@ -747,7 +747,7 @@ pop.00044.wav,pop,Come On Over (All I Want Is You),Christina Aguilera,6,D#
 pop.00045.wav,pop,Genie In a Bottle,Christina Aguilera,20,Fm
 pop.00046.wav,pop,Genie In a Bottle,Christina Aguilera,20,Fm
 pop.00047.wav,pop,Lady Marmalade,"Christina Aguilera, Lil' Kim, M√Ωa & P!nk",22,Gm
-pop.00048.wav,pop,Unknown Title,Unknown Subtitle,22,Gm
+pop.00048.wav,pop,Unknown Title,Unknown Artist,22,Gm
 pop.00049.wav,pop,Pero Me Acuerdo de T√≠,Christina Aguilera,9,F#
 pop.00050.wav,pop,What a Girl Wants,Christina Aguilera,0,A
 pop.00051.wav,pop,Lady Marmalade,"Christina Aguilera, Lil' Kim, M√Ωa & P!nk",22,Gm
@@ -762,7 +762,7 @@ pop.00059.wav,pop,"Jumpin', Jumpin'",Destiny's Child,16,C#m
 pop.00060.wav,pop,Bootylicious (Rockwilder Remix),Destiny's Child,15,Cm
 pop.00061.wav,pop,Apple Pie √† la Mode,Destiny's Child,12,Am
 pop.00062.wav,pop,Survivor,Destiny's Child,23,G#m
-pop.00063.wav,pop,Unknown Title,Unknown Subtitle,15,Cm
+pop.00063.wav,pop,Unknown Title,Unknown Artist,15,Cm
 pop.00064.wav,pop,If It Don't Fit (Thunder Dub),Abigail,-1,unknown/modulation
 pop.00065.wav,pop,Channels for Success,Jokers of the Scene,8,F
 pop.00066.wav,pop,Could I Have This Kiss Forever (Baladas),Whitney Houston And Enrique Iglesias,-1,unknown/modulation
@@ -841,7 +841,7 @@ reggae.00038.wav,reggae,Investigation Dub,Burning Spear,7,E
 reggae.00039.wav,reggae,World Dub,Burning Spear,21,F#m
 reggae.00040.wav,reggae,Loving Day,Burning Spear,5,D
 reggae.00041.wav,reggae,Israelites,Desmond Dekker & The Aces,1,A#
-reggae.00042.wav,reggae,Dry & Heavy,Burning Spear,5,D
+reggae.00042.wav,reggae,Dry & Heavy,Burning Spear,10,G
 reggae.00043.wav,reggae,Reggae Hit the Town,The Ethiopians,3,C
 reggae.00044.wav,reggae,Burning Reggae,Burning Spear,6,D#
 reggae.00045.wav,reggae,Unfaithful Baby - Original,The Heptones,-1,unknown/modulation
@@ -874,7 +874,7 @@ reggae.00071.wav,reggae,Big Ship,Freddie McGregor,8,F
 reggae.00072.wav,reggae,Prophecy,Freddie McGregor,5,D
 reggae.00073.wav,reggae,Hip-Hopera,Fugees & Bounty Killer,21,F#m
 reggae.00074.wav,reggae,Hip-Hopera,Fugees & Bounty Killer,21,F#m
-reggae.00075.wav,reggae,Legalize It,Peter Tosh,10,G
+reggae.00075.wav,reggae,Legalize It,Peter Tosh,3,C
 reggae.00076.wav,reggae,Night Nurse,Simply Red,12,Am
 reggae.00077.wav,reggae,The Border (Live),Gregory Isaacs,12,Am
 reggae.00078.wav,reggae,Universal Tribulation,Gregory Isaacs,22,Gm
@@ -938,7 +938,7 @@ rock.00035.wav,rock,Midnight Rambler (Live),The Rolling Stones,7,E
 rock.00036.wav,rock,Movin' Out (Anthony's Song),Billy Joel,8,F
 rock.00037.wav,rock,Brown Sugar,The Rolling Stones,3,C
 rock.00038.wav,rock,Knockin' On Heaven's Door,Guns N' Roses,9,F#
-rock.00039.wav,rock,The Song Remains the Same,Led Zeppelin,0,A
+rock.00039.wav,rock,The Song Remains the Same,Led Zeppelin,5,D
 rock.00040.wav,rock,The Crunge,Led Zeppelin,3,C
 rock.00041.wav,rock,Dancing Days,Led Zeppelin,3,C
 rock.00042.wav,rock,D'yer Mak'er,Led Zeppelin,3,C

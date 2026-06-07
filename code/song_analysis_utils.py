@@ -127,18 +127,53 @@ def get_romanized_chords(key: str, chords: List) -> List[str]:
     return romanized_sequence
 
 
+def _chord_root(chord: str) -> str:
+    """Extract the root note from a Chordino chord label. 'Dm7' → 'D', 'Dbmaj' → 'Db'."""
+    return chord[:2] if len(chord) > 1 and chord[1] == 'b' else chord[:1]
+
+
+def _is_minor_chord_label(chord: str) -> bool:
+    """True if a Chordino chord label denotes a minor chord. 'Dm' → True, 'Dmaj7' → False."""
+    suffix = chord[len(_chord_root(chord)):]
+    return suffix.startswith('m') and not suffix.startswith('maj')
+
+
+def _count_tonics(romanized: List[str], key: str) -> int:
+    """Count tonic chords ('I' for Major, 'i' for Minor) in a romanized sequence."""
+    return romanized.count('I' if key.endswith(' Major') else 'i')
+
+
 def get_best_romanized_chords(key: str, chords: List) -> tuple[List[str], str]:
     """
-    When the input key is Major, apply the following priority order:
-      1. Fifth (dominant) of the original key, if it has fewer '*' than the original.
-      2. Fourth (subdominant), if it has fewer '*' than the original.
-      3. Relative minor, if it has fewer '*' than the original.
-      4. Same tonic Minor, if it has ≥2 fewer '*' than every other candidate.
-      5. Original key (fallback).
+    Choose the best key for `chords` from a small candidate set built around
+    `key` (its fourth, fifth, relative, parallel), and return the romanized
+    sequence for that key plus the key itself.
 
-    When the input key is Minor, return whichever candidate has the fewest '*'.
+    Selection rules:
+      0. Single-tonic short-circuit — if Chordino reports only one chord root,
+         use it directly; mode comes from the first chord's quality ('m' → Minor).
+      1. Fewest *effective* breaks (raw '*' count plus a switching cost) wins.
+         The original (input/KS-predicted) key has cost 0 and is the prior;
+         every other candidate pays a cost so over-correction is harder.
+            fourth, fifth: +1   (need ≥2 fewer breaks, or 1 fewer + more tonics)
+            relative:      +2   (need ≥3 fewer breaks)
+            parallel:      +0   (usually a KS mode-detection slip; easy to flip)
+      2. Tiebreaker: most tonic chords ('I' / 'i'), also considering the switching cost.
+      3. Final tiebreaker (priority hierarchy):
+            original (Major only) > fourth > fifth > relative > parallel > original (Minor)
+         For a Minor input, this naturally prefers the parallel- or relative-Major
+         candidate over the original Minor when they tie on effective breaks.
     """
-    tonic = key.split()[0]
+    # ── Update 3: single-tonic short-circuit ─────────────────────────────────
+    non_N = [c.chord for c in chords if c.chord != 'N']
+    if non_N and len({_chord_root(c) for c in non_N}) == 1:
+        single_mode = "Minor" if _is_minor_chord_label(non_N[0]) else "Major"
+        single_key  = f"{_chord_root(non_N[0])} {single_mode}"
+        print(f"Key selected: {single_key}  (single-tonic short-circuit)")
+        return get_romanized_chords(single_key, chords), single_key
+
+    # ── Build candidate keys ─────────────────────────────────────────────────
+    tonic      = key.split()[0]
     mode       = "Major" if key.endswith(" Major") else "Minor"
     other_mode = "Minor" if mode == "Major" else "Major"
 
@@ -149,41 +184,40 @@ def get_best_romanized_chords(key: str, chords: List) -> tuple[List[str], str]:
     fourth_tonic   = cof[(idx - 1) % 12]
     relative_tonic = circle_of_fifths[other_mode][idx]
 
-    original_key  = f"{tonic} {mode}"
-    fifth_key     = f"{fifth_tonic} {mode}"
-    fourth_key    = f"{fourth_tonic} {mode}"
-    relative_key  = f"{relative_tonic} {other_mode}"
-    same_minor_key = f"{tonic} Minor"
+    original_key = f"{tonic} {mode}"
+    fourth_key   = f"{fourth_tonic} {mode}"
+    fifth_key    = f"{fifth_tonic} {mode}"
+    relative_key = f"{relative_tonic} {other_mode}"
+    parallel_key = f"{tonic} {other_mode}"
 
-    # Collect unique candidates (preserving definition order)
-    seen, candidates = set(), []
-    for k in [original_key, fifth_key, fourth_key, relative_key, same_minor_key]:
-        if k not in seen:
-            seen.add(k)
-            candidates.append(k)
+    candidates = [original_key, fourth_key, fifth_key, relative_key, parallel_key]
+    results = {k: get_romanized_chords(k, chords) for k in candidates}
+    breaks  = {k: seq.count('*')         for k, seq in results.items()}
+    tonics  = {k: _count_tonics(seq, k)  for k, seq in results.items()}
 
-    results  = {k: get_romanized_chords(k, chords) for k in candidates}
-    x_counts = {k: seq.count('*') for k, seq in results.items()}
+    # Cost added to `breaks` to make leaving the original key harder.
+    switching_cost = {
+        original_key: 0,
+        fourth_key:   1,
+        fifth_key:    1,
+        relative_key: 2,
+        parallel_key: 1,
+    }
 
-    if mode == "Major":
-        original_x = x_counts[original_key]
+    # Lower priority value = preferred when (effective breaks, tonics) are tied.
+    priority = {
+        original_key: 0 if mode == "Major" else 5,
+        fourth_key:   1,
+        fifth_key:    2,
+        relative_key: 3,
+        parallel_key: 4,
+    }
+    best_key = min(
+        candidates,
+        key=lambda k: (breaks[k] + switching_cost[k], -tonics[k] + switching_cost[k], priority[k]),
+    )
 
-        if x_counts[fourth_key] < original_x:
-            best_key = fourth_key
-        elif x_counts[fifth_key] < original_x:
-            best_key = fifth_key
-        elif x_counts[relative_key] < original_x:
-            best_key = relative_key
-        elif (same_minor_key in x_counts and
-              all(x_counts[same_minor_key] <= x_counts[k] - 2
-                  for k in candidates if k != same_minor_key)):
-            best_key = same_minor_key
-        else:
-            best_key = original_key
-    else:
-        best_key = min(x_counts, key=x_counts.get)
-
-    print(f"Key selected: {best_key}  (* counts: {x_counts})")
+    print(f"Key selected: {best_key}  (breaks: {breaks}, tonics: {tonics})")
     return results[best_key], best_key
 
 
@@ -227,7 +261,7 @@ def plot_chromagram(y, sr, duration):
 
 # ── Song Analysis Pipeline ───────────────────────────────────────────────────
 
-def analyze_song(wav_file: str, duration = 30) -> tuple[str, str, list, list, np.ndarray]:
+def analyze_song(wav_file: str, duration = None, ignore_GT_key: bool = False) -> tuple[str, str, list, list, np.ndarray]:
     """
     Full pipeline:
       1. Load audio and apply HPSS
@@ -260,15 +294,26 @@ def analyze_song(wav_file: str, duration = 30) -> tuple[str, str, list, list, np
     lookup    = _load_gtzan_lookup()
     gt_key_str = _gt_key_to_str(lookup[filename]) if filename in lookup else None
 
-    if gt_key_str is not None:
-        print(f"GT key: {gt_key_str}")
+    romanized: List[str] = []
+    final_key: str | None = None
+    if gt_key_str is not None and not ignore_GT_key:
         romanized = get_romanized_chords(gt_key_str, chords)
-        final_key = gt_key_str
-    else:
+        # If the GT key romanizes to mostly breaks ('*'), it's a poor fit for the
+        # detected chords -> fall back to generating the key from the audio.
+        if romanized and romanized.count('*') > len(romanized) / 2:
+            print(f"GT key: {gt_key_str}  (rejected: >half breaks, generating key)")
+            final_key = None
+        else:
+            print(f"GT key: {gt_key_str}")
+            final_key = gt_key_str
+
+    if final_key is None:
+        # Get chroma features
         chromagram  = librosa.feature.chroma_stft(y=y_harmonic, sr=sr, hop_length=HOP_LENGTH)
         mean_chroma = np.mean(chromagram, axis=1)
-        coeffs_major, coeffs_minor = KeyEstimator()(mean_chroma)
 
+        # Use KS algorithm to make an initial prediction of the key
+        coeffs_major, coeffs_minor = KeyEstimator()(mean_chroma)
         pitch_classes = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
         all_coeffs    = np.concatenate([coeffs_major, coeffs_minor])
         best_idx      = np.argmax(all_coeffs)
@@ -277,6 +322,8 @@ def analyze_song(wav_file: str, duration = 30) -> tuple[str, str, list, list, np
                          f"{pitch_classes[best_idx % 12]} Minor")
         print(f"Predicted key: {predicted_key}")
 
+        # With the initial key prediction and the chords, test other keys with the same
+        # set of chords in
         romanized, final_key = get_best_romanized_chords(predicted_key, chords)
 
     raw = [c.chord for c in chords if c.chord != 'N']
@@ -287,7 +334,7 @@ def analyze_song(wav_file: str, duration = 30) -> tuple[str, str, list, list, np
     return mode, final_key, raw, romanized, chord_change_matrix(final_key, romanized)
 
 
-def analyze_all_songs(root_dir: str) -> dict:
+def analyze_all_songs(root_dir: str, ignore_GT_key: bool = False) -> dict:
     """
     Run analyze_song on every .wav file under root_dir and store results in a
     nested dictionary keyed by mode, then by song title.
@@ -309,7 +356,7 @@ def analyze_all_songs(root_dir: str) -> dict:
         title = os.path.splitext(os.path.basename(wav_file))[0]
         print(f"[{i+1}/{len(wav_files)}] {title}")
         try:
-            mode, key, raw, romanized, matrix = analyze_song(wav_file)
+            mode, key, raw, romanized, matrix = analyze_song(wav_file, duration=30, ignore_GT_key=ignore_GT_key)
             if len(romanized) < 3:
                 print(f"  SKIPPED: only {len(romanized)} chord(s) detected.")
                 continue
